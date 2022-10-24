@@ -6,7 +6,7 @@
 /*   By: rrasezin <rrasezin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:30:00 by rrasezin          #+#    #+#             */
-/*   Updated: 2022/10/25 00:33:38 by rrasezin         ###   ########.fr       */
+/*   Updated: 2022/10/25 00:56:34 by rrasezin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ int	ft_printf(const	char *str, ...)
 
 int	main()
 {
-	ft_printf("%c %c\n", 'm' ,'j');
+	ft_printf("%d %d\n", 1265 ,2154);
 	//printf("%s %s", "world " ,"!!");
 }
