@@ -6,20 +6,20 @@
 /*   By: rrasezin <rrasezin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:30:00 by rrasezin          #+#    #+#             */
-/*   Updated: 2022/10/25 00:56:34 by rrasezin         ###   ########.fr       */
+/*   Updated: 2022/10/25 19:49:00 by rrasezin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const	char *str, ...)
 {
 	va_list	args;
-	int		i;
 	int		j;
+	int		count;
 
-	i = 0;
 	j = 0;
+	count = 0;
 	va_start (args, str);
 	while (str[j])
 	{
@@ -31,13 +31,14 @@ int	ft_printf(const	char *str, ...)
 		else
 			ft_print_char(str[j]);
 		j++;
+		count++;
 	}
 	va_end (args);
-	return (i);
+	return (count);
 }
 
-int	main()
+int	main(void)
 {
-	ft_printf("%d %d\n", 1265 ,2154);
-	//printf("%s %s", "world " ,"!!");
+	printf("%d", ft_printf("%s%s%s\n", "", "", ""));
+	printf("%d", printf("%s\n", ""));
 }

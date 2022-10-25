@@ -6,18 +6,13 @@
 /*   By: rrasezin <rrasezin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:44:30 by rrasezin          #+#    #+#             */
-/*   Updated: 2022/10/24 21:50:48 by rrasezin         ###   ########.fr       */
+/*   Updated: 2022/10/25 19:21:00 by rrasezin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_print_char(char c)
 {
 	write (1, &c, 1);
 }
-
-// int main()
-// {
-//     ft_print_char('m');
-// }

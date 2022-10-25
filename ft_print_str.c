@@ -6,11 +6,11 @@
 /*   By: rrasezin <rrasezin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 20:05:24 by rrasezin          #+#    #+#             */
-/*   Updated: 2022/10/24 20:09:12 by rrasezin         ###   ########.fr       */
+/*   Updated: 2022/10/25 19:21:21 by rrasezin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_print_str(char *c)
 {
