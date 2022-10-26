@@ -6,7 +6,7 @@
 /*   By: rrasezin <rrasezin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 16:58:49 by rrasezin          #+#    #+#             */
-/*   Updated: 2022/10/25 20:55:20 by rrasezin         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:26:49 by rrasezin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,16 @@ static unsigned int	ft_check(int i)
 	return (result);
 }
 
-void	ft_print_u(int i)
+void	ft_print_u(int j, int *i)
 {
 	unsigned int	result;
 
-	result = ft_check(i);
+	result = ft_check(j);
 	if (result < 10)
-		ft_print_nbr(result);
+		ft_print_nbr(result, i);
 	else
 	{
-		ft_print_u(result / 10);
-		ft_print_u(result % 10);
+		ft_print_u(result / 10, i);
+		ft_print_u(result % 10, i);
 	}
 }

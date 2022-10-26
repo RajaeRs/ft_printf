@@ -6,7 +6,7 @@
 /*   By: rrasezin <rrasezin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:30:00 by rrasezin          #+#    #+#             */
-/*   Updated: 2022/10/25 20:55:40 by rrasezin         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:59:07 by rrasezin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,22 @@ int	ft_printf(const	char *str, ...)
 {
 	va_list	args;
 	int		j;
-	int		count;
 
 	j = 0;
-	count = 0;
 	va_start (args, str);
-	while (str[j])
+	while (*str)
 	{
-		if (str[j] == '%')
+		if (*str == '%')
 		{
-			j++;
-			print_data_type(args, str, j);
+			str++;
+			print_data_type(args, *str, &j);
 		}
 		else
-			ft_print_char(str[j]);
-		j++;
-		count++;
+		{
+			ft_print_char(*str, &j);
+		}
+		str++;
 	}
 	va_end (args);
-	return (count);
-}
-
-int	main(void)
-{
-	printf("%d\n", ft_printf("%p\n", ""));
-	printf("%d", printf("%p\n", ""));
-
+	return (j);
 }

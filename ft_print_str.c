@@ -6,25 +6,16 @@
 /*   By: rrasezin <rrasezin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 20:05:24 by rrasezin          #+#    #+#             */
-/*   Updated: 2022/10/25 20:55:06 by rrasezin         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:59:00 by rrasezin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_str(char *c)
+void	ft_print_str(char *c, int *i)
 {
-	int	i;
-
-	i = 0;
-	while (c[i] != '\0')
-	{
-		write (1, &c[i], 1);
-		i++;
-	}
+	if (!c)
+		c = "(null)";
+	while (*c)
+		ft_print_char(*(c++), i);
 }
-
-// int main()
-// {
-//     ft_print_str("hello world!");
-// }

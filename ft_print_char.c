@@ -6,13 +6,14 @@
 /*   By: rrasezin <rrasezin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:44:30 by rrasezin          #+#    #+#             */
-/*   Updated: 2022/10/25 20:54:26 by rrasezin         ###   ########.fr       */
+/*   Updated: 2022/10/26 18:28:04 by rrasezin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_char(char c)
+void	ft_print_char(char c, int *i)
 {
 	write (1, &c, 1);
+	(*i)++;
 }
